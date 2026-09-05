@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  items?: CollectionEntry<'news'>[];
+}
+
+const items =
+  Astro.props.items ??
+  (await getCollection('news')).sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+  );
+
+function formatDate(entry: CollectionEntry<'news'>): string {
+  if (entry.data.dateLabel) return entry.data.dateLabel;
+  return entry.data.date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+
+function isoDate(d: Date): string {
+  return d.toISOString().slice(0, 10);
+}
+---
+
+<section id="news" class="section section--news" aria-labelledby="news-heading">
+  <div class="wrap">
+    <p class="kicker">News</p>
+    <h2 id="news-heading">From the lab</h2>
+    <ol class="news-list">
+      {
+        items.map((entry) => (
+          <li class="news-item">
+            <time datetime={isoDate(entry.data.date)}>{formatDate(entry)}</time>
+            <div>
+              <h3>{entry.data.title}</h3>
+              <p>{entry.data.summary}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
