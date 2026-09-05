@@ -2,9 +2,27 @@
 
 This repo is the **Vercel play deploy** of the STEC Satellite Lab site.
 
-GitHub Pages stays on **[NyeGuy/satellite-lab-site](https://github.com/NyeGuy/satellite-lab-site)** (`https://nyeguy.github.io/satellite-lab-site/` after Pages is enabled on `main`). Do not treat this repo as the Pages source.
+GitHub Pages stays on **[NyeGuy/satellite-lab-site](https://github.com/NyeGuy/satellite-lab-site)** (`https://nyeguy.github.io/satellite-lab-site/` after Pages is enabled on `main`). Do not treat this repo as the Pages source. Do not change the Pages setup there.
 
 **Proof of concept — internal draft, not for publication.** Content pending review under STEC data classification.
+
+## Playable URL
+
+Open this first (public, no Vercel login):
+
+**https://temporary-express-willow-lgf681z.vercel.app**
+
+That is a claimable Vercel deploy of this Astro site (`base: '/'`). Claim it onto the Protostar team so it does not expire:
+
+**https://vercel.com/claim-deployment?code=d23064df-a3d8-4928-9101-ad6070ae3a28**
+
+Protostar team preview (Vercel Authentication — log in as a Protostar member):
+
+**https://satlab-play-root-protostar1.vercel.app**
+
+Inspector: https://vercel.com/protostar1/satlab-play-root/B4JYSsq9jUHPwv4Zq3yhzNPLYFAd
+
+After this PR is merged, import **NyeGuy/satellite-lab-play** in the Protostar Vercel dashboard so git on `main` rebuilds the Astro project. Do not import until `main` has this site (empty `main` would deploy the README only).
 
 ## Run locally
 
@@ -23,12 +41,6 @@ This playground is hosted at the **site root** (`base: '/'`). There is no `/sate
 npm run build
 npm run preview
 ```
-
-## Vercel
-
-Astro static, root hosting. After this branch is on GitHub, the Protostar team project `satellite-lab-play` deploys from git (once linked) and from the file/preview deploy noted in the PR.
-
-Production-style URL (after first deploy): `https://satellite-lab-play.vercel.app`
 
 ## Edit copy
 
