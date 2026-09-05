@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://satellite-lab-play.vercel.app/sitemap.xml

@@ -1,0 +1,41 @@
+{
+  "id": "people",
+  "kicker": "People",
+  "title": "Who is in the lab",
+  "lead": {
+    "name": "Matt Akers",
+    "role": "Director, Satellite Lab",
+    "initials": "MA",
+    "image": ""
+  },
+  "residentsHeading": "Graduate Residents",
+  "residents": [
+    {
+      "name": "Appointment forthcoming",
+      "role": "Graduate Resident, Spatial Intelligence",
+      "track": "Spatial Intelligence",
+      "initials": "SI",
+      "image": ""
+    },
+    {
+      "name": "Appointment forthcoming",
+      "role": "Graduate Resident, Human-Robot Interaction",
+      "track": "Human-Robot Interaction",
+      "initials": "HR",
+      "image": ""
+    },
+    {
+      "name": "Appointment forthcoming",
+      "role": "Graduate Resident, Future of Gaming",
+      "track": "Future of Gaming",
+      "initials": "FG",
+      "image": ""
+    }
+  ],
+  "institutional": {
+    "name": "Nye Warburton",
+    "role": "Dean, School of Creative Technology",
+    "initials": "NW",
+    "image": ""
+  }
+}
