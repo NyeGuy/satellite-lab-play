@@ -1,0 +1,29 @@
+---
+import { withBase } from '../lib/paths';
+
+interface Props {
+  name: string;
+  initials: string;
+  image?: string;
+  size?: 'lead' | 'default';
+}
+
+const { name, initials, image = '', size = 'default' } = Astro.props;
+const raw = image?.trim();
+const src = raw
+  ? raw.startsWith('http://') || raw.startsWith('https://')
+    ? raw
+    : withBase(raw.replace(/^\/+/, ''))
+  : '';
+const named = name !== 'Appointment forthcoming';
+---
+
+<div class:list={['portrait', size === 'lead' && 'portrait--lead']}>
+  {
+    src ? (
+      <img src={src} alt={named ? name : ''} width="200" height="200" />
+    ) : (
+      <span aria-hidden="true">{initials}</span>
+    )
+  }
+</div>
