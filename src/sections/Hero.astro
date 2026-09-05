@@ -1,0 +1,27 @@
+---
+import site from '../../content/site.json';
+
+interface Props {
+  headline?: string;
+  mission?: string;
+  mantra?: string;
+  location?: string;
+}
+
+const {
+  headline = site.headline,
+  mission = site.mission,
+  mantra = site.mantra,
+  location = site.location,
+} = Astro.props;
+---
+
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero__watermark" aria-hidden="true">S</div>
+  <div class="wrap hero__inner">
+    <h1 id="hero-heading">{headline}</h1>
+    <p class="hero__mission">{mission}</p>
+    <p class="hero__mantra">{mantra}</p>
+    <p class="hero__location">{location}</p>
+  </div>
+</section>

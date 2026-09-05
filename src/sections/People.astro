@@ -1,0 +1,71 @@
+---
+import Portrait from '../components/Portrait.astro';
+import people from '../../content/people.json';
+
+interface Person {
+  name: string;
+  role: string;
+  initials: string;
+  image?: string;
+  track?: string;
+}
+
+interface Props {
+  lead?: Person;
+  residents?: Person[];
+  institutional?: Person;
+}
+
+const lead = Astro.props.lead ?? people.lead;
+const residents = Astro.props.residents ?? people.residents;
+const institutional = Astro.props.institutional ?? people.institutional;
+---
+
+<section id="people" class="section" aria-labelledby="people-heading">
+  <div class="wrap">
+    <p class="kicker">{people.kicker}</p>
+    <h2 id="people-heading">{people.title}</h2>
+
+    <article class="lead-card">
+      <Portrait
+        name={lead.name}
+        initials={lead.initials}
+        image={lead.image}
+        size="lead"
+      />
+      <div>
+        <h3>{lead.name}</h3>
+        <p class="person-role">{lead.role}</p>
+      </div>
+    </article>
+
+    <div class="residents">
+      {
+        residents.map((person) => (
+          <article class="resident-card">
+            <Portrait
+              name={person.name}
+              initials={person.initials}
+              image={person.image}
+            />
+            <h3>{person.name}</h3>
+            <p class="person-role">{person.role}</p>
+            {person.track && <p class="person-track">{person.track}</p>}
+          </article>
+        ))
+      }
+    </div>
+
+    <article class="institution-card">
+      <Portrait
+        name={institutional.name}
+        initials={institutional.initials}
+        image={institutional.image}
+      />
+      <div>
+        <h3>{institutional.name}</h3>
+        <p class="person-role">{institutional.role}</p>
+      </div>
+    </article>
+  </div>
+</section>

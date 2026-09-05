@@ -1,0 +1,35 @@
+---
+import partners from '../../content/partners.json';
+
+interface Model {
+  title: string;
+  body: string;
+}
+
+interface Props {
+  models?: Model[];
+  note?: string;
+}
+
+const models = Astro.props.models ?? partners.models;
+const note = Astro.props.note ?? partners.note;
+---
+
+<section id="partners" class="section" aria-labelledby="partners-heading">
+  <div class="wrap">
+    <p class="kicker">{partners.kicker}</p>
+    <h2 id="partners-heading">{partners.title}</h2>
+    <p>{partners.intro}</p>
+    <div class="models">
+      {
+        models.map((model) => (
+          <article class="model">
+            <h3>{model.title}</h3>
+            <p>{model.body}</p>
+          </article>
+        ))
+      }
+    </div>
+    <p class="partner-note">{note}</p>
+  </div>
+</section>
