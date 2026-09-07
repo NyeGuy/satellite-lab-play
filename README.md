@@ -1,6 +1,12 @@
 # Satellite Lab — Vercel playground
 
-This repo is the **Vercel play deploy** of the STEC Satellite Lab site.
+> **Ownership:** Owner Anvil (Forge family) · Lead Forge · CoS Nyborg · **Merge: Nye only**
+>
+> **Playground / Vercel — not the official Pages site.** Official public site: [NyeGuy/satellite-lab-site](https://github.com/NyeGuy/satellite-lab-site).
+>
+> Dev pipeline: **[PIPELINE.md](./PIPELINE.md)** · Agent rules: **[AGENTS.md](./AGENTS.md)** · Editable copy: **[`content/`](./content/)**
+
+This repo is the **Vercel play deploy** of the STEC Satellite Lab site — a sandbox, not the official publication surface.
 
 GitHub Pages stays on **[NyeGuy/satellite-lab-site](https://github.com/NyeGuy/satellite-lab-site)** (`https://nyeguy.github.io/satellite-lab-site/` after Pages is enabled on `main`). Do not treat this repo as the Pages source. Do not change the Pages setup there.
 
@@ -26,25 +32,35 @@ After this PR is merged, import **NyeGuy/satellite-lab-play** in the Protostar V
 
 ## Run locally
 
-Requires Node.js 22 or newer.
+Requires Node.js 22 or newer (`package.json` → `engines.node`).
 
 ```bash
-npm install
+npm i
 npm run dev
 ```
 
 Dev server: [http://localhost:4321/](http://localhost:4321/)
 
-This playground is hosted at the **site root** (`base: '/'`). There is no `/satellite-lab-site/` prefix here.
+This playground is hosted at the **site root** (`base: '/'`). There is no `/satellite-lab-site/` prefix here (the Pages sibling uses `/satellite-lab-site/`).
+
+### npm scripts
+
+These are the only scripts in `package.json`:
+
+| Script | Runs | What it does |
+| --- | --- | --- |
+| `npm run dev` | `astro dev` | Local dev server at [http://localhost:4321/](http://localhost:4321/) |
+| `npm run build` | `astro build` | Static production build → `dist/` |
+| `npm run preview` | `astro preview` | Serve `dist/` locally to check the production build |
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Edit copy
+## Edit copy (`content/`)
 
-Same as the Pages repo. All visitor-facing text is under `content/`.
+Same as the Pages repo. All visitor-facing text is under [`content/`](./content/). Edit those files; do not hard-code body copy in `src/` components.
 
 | File | What it holds |
 | --- | --- |
