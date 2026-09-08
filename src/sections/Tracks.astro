@@ -1,0 +1,41 @@
+---
+import tracks from '../../content/tracks.json';
+
+interface TrackItem {
+  slug: string;
+  number: string;
+  name: string;
+  kicker: string;
+  tone: string;
+  body: string;
+}
+
+interface Props {
+  items?: TrackItem[];
+}
+
+const items = Astro.props.items ?? tracks.items;
+---
+
+<section id="tracks" aria-label={tracks.title}>
+  {
+    items.map((track) => (
+      <article
+        id={track.slug}
+        class:list={['track-band', `track-band--${track.tone}`]}
+        aria-labelledby={`${track.slug}-name`}
+      >
+        <div class="wrap track-band__grid">
+          <div>
+            <p class="track-band__index">{track.number}</p>
+            <h2 id={`${track.slug}-name`} class="track-band__name">
+              {track.name}
+            </h2>
+            <p class="track-band__kicker">{track.kicker}</p>
+          </div>
+          <p class="track-band__body">{track.body}</p>
+        </div>
+      </article>
+    ))
+  }
+</section>

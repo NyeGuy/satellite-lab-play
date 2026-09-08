@@ -1,0 +1,21 @@
+{
+  "id": "partners",
+  "kicker": "Partners",
+  "title": "How the lab works with industry",
+  "intro": "Three engagement models. Every engagement is scoped before student work begins.",
+  "models": [
+    {
+      "title": "Year-long track engagements",
+      "body": "A partner sits with one research track across the academic year. Faculty and graduate residents hold the brief; students train on the problem inside a scoped studio."
+    },
+    {
+      "title": "Sponsored sprints & day hacks",
+      "body": "Short, time-boxed studios and public hacks—including events such as Hack iX—with visiting mentors in the room for the duration of the sprint."
+    },
+    {
+      "title": "Platform & infrastructure partnerships",
+      "body": "Tools, engines, and platforms stay with the partner. The lab uses them as given infrastructure and does not re-author the stack."
+    }
+  ],
+  "note": "The lab authors its creative and behavioral work openly; partner platforms remain the partner's. Every engagement is scoped before student work begins."
+}

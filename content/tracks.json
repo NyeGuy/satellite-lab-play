@@ -1,0 +1,32 @@
+{
+  "id": "tracks",
+  "kicker": "Research tracks",
+  "title": "Three tracks",
+  "intro": "Each track is a full studio: faculty, graduate residents, and a year-long industry engagement. Work is scoped before students begin.",
+  "items": [
+    {
+      "slug": "spatial-intelligence",
+      "number": "01",
+      "name": "Spatial Intelligence",
+      "kicker": "SCAN · BUILD · INHABIT",
+      "tone": "light",
+      "body": "Engines and AI for physical space—scanning, Gaussian splatting, and USD pipelines that move a site from capture to a place people can inhabit. The track is anchored by a Marriott International spatial design co-op."
+    },
+    {
+      "slug": "human-robot-interaction",
+      "number": "02",
+      "name": "Human-Robot Interaction",
+      "kicker": "BUY THE BODY · OWN THE SOUL",
+      "tone": "mid",
+      "body": "Behavioral design and character for machines. Students train Booster K1 robots and work in animatronics—never building the body, always authoring the soul. The track anchors the Robotics B.Des. launching Fall 2026."
+    },
+    {
+      "slug": "future-of-gaming",
+      "number": "03",
+      "name": "Future of Gaming",
+      "kicker": "SHIP · INCUBATE · RETURN",
+      "tone": "dark",
+      "body": "Agentic tools, a jam-to-storefront pipeline, and indie incubation. Home to the largest on-ground Global Game Jam site in the U.S.—students ship, incubate, and return work to the floor."
+    }
+  ]
+}
