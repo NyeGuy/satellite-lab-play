@@ -50,7 +50,7 @@ Same as the Pages repo. All visitor-facing text is under `content/`.
 | --- | --- |
 | `content/site.json` | Name, headline, mission, mantra, location, nav, SCAD link, footer disclaimer |
 | `content/tracks.json` | The three research tracks (kicker, body, tone) |
-| `content/people.json` | Director, graduate residents, dean |
+| `content/people.json` | Director and graduate residents |
 | `content/partners.json` | Engagement models and closing note |
 | `content/news/*.md` | News items (one file each) |
 
@@ -86,13 +86,23 @@ Put the image in `public/portraits/` and set `image` on that person in `content/
 
 Leave `image` as `""` to keep the grey initials placeholder. Do not invent names for graduate residents — keep **Appointment forthcoming** until an appointment is real.
 
+### Add a track picture
+
+Put the image in `public/tracks/` and set `image` on that track in `content/tracks.json`:
+
+```json
+"image": "tracks/spatial-intelligence.jpg"
+```
+
+Leave `image` as `""` to keep the grey picture slot. Do not invent photos.
+
 ## Content rules
 
 Identical to the Pages repo:
 
 - No revenue, enrollment, or growth percentages.
-- Company names only: Marriott International, Booster (K1), Johnson & Johnson MedTech, SCAD.
-- Named people only: Matt Akers, Nye Warburton. Residents stay “Appointment forthcoming”.
+- Company names only: Booster (K1), Johnson & Johnson MedTech, SCAD.
+- Named people only: Matt Akers. Residents stay “Appointment forthcoming”.
 - Students **train** robots. They never “build” robots.
 - Keep the footer disclaimer exactly as in `content/site.json`.
 - Grey palette only (no accent color). System fonts only. No analytics, CDNs, or webfonts.

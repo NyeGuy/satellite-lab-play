@@ -13,12 +13,10 @@ interface Person {
 interface Props {
   lead?: Person;
   residents?: Person[];
-  institutional?: Person;
 }
 
 const lead = Astro.props.lead ?? people.lead;
 const residents = Astro.props.residents ?? people.residents;
-const institutional = Astro.props.institutional ?? people.institutional;
 ---
 
 <section id="people" class="section" aria-labelledby="people-heading">
@@ -55,17 +53,5 @@ const institutional = Astro.props.institutional ?? people.institutional;
         ))
       }
     </div>
-
-    <article class="institution-card">
-      <Portrait
-        name={institutional.name}
-        initials={institutional.initials}
-        image={institutional.image}
-      />
-      <div>
-        <h3>{institutional.name}</h3>
-        <p class="person-role">{institutional.role}</p>
-      </div>
-    </article>
   </div>
 </section>

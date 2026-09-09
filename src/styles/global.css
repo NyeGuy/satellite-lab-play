@@ -312,6 +312,30 @@ p:last-child {
   gap: 1.5rem 3rem;
 }
 
+.track-visual {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  background: var(--g-45);
+  color: var(--g-95);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.track-visual__slot {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.track-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .track-band__index {
   margin: 0 0 0.85rem;
   font-family: var(--font-heading);
@@ -343,12 +367,17 @@ p:last-child {
 
 @media (min-width: 720px) {
   .track-band__grid {
-    grid-template-columns: minmax(14rem, 0.9fr) 1.2fr;
+    grid-template-columns: minmax(16rem, 1.15fr) minmax(14rem, 0.85fr);
     align-items: start;
   }
 
+  .track-visual {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
   .track-band__body {
-    padding-top: 2.35rem;
+    padding-top: 0.25rem;
   }
 }
 
@@ -363,8 +392,7 @@ p:last-child {
   background: var(--g-88);
 }
 
-.lead-card,
-.institution-card {
+.lead-card {
   display: grid;
   grid-template-columns: 5.5rem 1fr;
   gap: 1.15rem 1.35rem;
@@ -372,11 +400,6 @@ p:last-child {
   padding: 1.25rem 0;
   border-top: 1px solid var(--g-78);
   border-bottom: 1px solid var(--g-78);
-}
-
-.institution-card {
-  margin-top: 2.25rem;
-  grid-template-columns: 4.5rem 1fr;
 }
 
 .residents {

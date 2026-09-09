@@ -1,0 +1,35 @@
+---
+import { withBase } from '../lib/paths';
+
+/**
+ * Grey picture slot for a research track.
+ * Leave `image` empty for the placeholder; set a path in
+ * content/tracks.json when a real still lands (same pattern as portraits).
+ */
+interface Props {
+  name: string;
+  number: string;
+  image?: string;
+}
+
+const { name, number, image = '' } = Astro.props;
+const raw = image?.trim();
+const src = raw
+  ? raw.startsWith('http://') || raw.startsWith('https://')
+    ? raw
+    : withBase(raw.replace(/^\/+/, ''))
+  : '';
+---
+
+<figure class="track-visual">
+  {
+    src ? (
+      <img src={src} alt={name} width="800" height="600" />
+    ) : (
+      <span class="track-visual__slot" aria-hidden="true">
+        {number}
+      </span>
+    )
+  }
+  <figcaption class="visually-hidden">{name} — image forthcoming</figcaption>
+</figure>

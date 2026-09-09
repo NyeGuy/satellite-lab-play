@@ -1,12 +1,10 @@
 {
   "name": "Satellite Lab",
   "shortName": "Satellite Lab",
-  "school": "School of Creative Technology",
-  "institution": "SCAD",
-  "title": "Satellite Lab — SCAD STEC",
-  "description": "Satellite Lab is a STEC research and enterprise studio at Montgomery Sheds in Savannah, Georgia. Creative technology work with industry across spatial intelligence, human–robot interaction, and the future of gaming.",
+  "title": "Satellite Lab",
+  "description": "Satellite Lab is a research and enterprise studio at Montgomery Sheds in Savannah, Georgia. Creative technology work with industry across spatial intelligence, human–robot interaction, and the future of gaming.",
   "headline": "Where creative technology meets industry.",
-  "mission": "Satellite Lab is a STEC research and enterprise studio at Montgomery Sheds. Students and faculty work with industry across three tracks—spatial intelligence, human–robot interaction, and the future of gaming.",
+  "mission": "Satellite Lab is a research and enterprise studio at Montgomery Sheds. Students and faculty work with industry across three tracks—spatial intelligence, human–robot interaction, and the future of gaming.",
   "mantra": "DESIGN TOMORROW. BUILD EVERY DAY.",
   "location": "Montgomery Sheds · Savannah, Georgia",
   "nav": [
