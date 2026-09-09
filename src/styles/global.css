@@ -349,7 +349,7 @@ p:last-child {
   min-height: 12rem;
   background: var(--g-45);
   color: var(--g-95);
-  border: 1px solid var(--accent);
+  border: 2px solid var(--accent);
   display: grid;
   place-items: center;
   overflow: hidden;
