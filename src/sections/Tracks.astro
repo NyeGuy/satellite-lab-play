@@ -1,4 +1,5 @@
 ---
+import TrackVisual from '../components/TrackVisual.astro';
 import tracks from '../../content/tracks.json';
 
 interface TrackItem {
@@ -8,6 +9,7 @@ interface TrackItem {
   kicker: string;
   tone: string;
   body: string;
+  image?: string;
 }
 
 interface Props {
@@ -26,13 +28,18 @@ const items = Astro.props.items ?? tracks.items;
         aria-labelledby={`${track.slug}-name`}
       >
         <div class="wrap track-band__grid">
-          <div>
+          <div class="track-band__head">
             <p class="track-band__index">{track.number}</p>
             <h2 id={`${track.slug}-name`} class="track-band__name">
               {track.name}
             </h2>
             <p class="track-band__kicker">{track.kicker}</p>
           </div>
+          <TrackVisual
+            name={track.name}
+            number={track.number}
+            image={track.image}
+          />
           <p class="track-band__body">{track.body}</p>
         </div>
       </article>

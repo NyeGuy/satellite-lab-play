@@ -7,6 +7,10 @@
   --g-15: #232629;
   --black: #000000;
 
+  /* Gallery ochre — brass, not neon. Swap when Nye’s reference lands. */
+  --accent: #c9a84b;
+  --accent-ink: #806618;
+
   --font-heading: Georgia, "Times New Roman", Times, serif;
   --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -45,8 +49,8 @@ body {
   background: var(--g-95);
   color: var(--g-15);
   font-family: var(--font-body);
-  font-size: 1.0625rem;
-  line-height: 1.55;
+  font-size: 1.05rem;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -66,13 +70,18 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 2px solid var(--g-15);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
 .track-band--dark :focus-visible,
 .site-footer :focus-visible {
-  outline-color: var(--g-95);
+  outline-color: var(--accent);
+}
+
+.site-rail {
+  height: 3px;
+  background: var(--accent);
 }
 
 .skip-link {
@@ -98,13 +107,22 @@ a:hover {
 }
 
 .kicker {
-  margin: 0 0 0.65rem;
+  margin: 0 0 0.7rem;
   font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--g-28);
+  color: var(--accent-ink);
+}
+
+.kicker::before {
+  content: "";
+  display: block;
+  width: 1.35rem;
+  height: 1px;
+  margin-bottom: 0.55rem;
+  background: var(--accent);
 }
 
 .band--dark .kicker {
@@ -117,25 +135,25 @@ h3,
 .serif {
   font-family: var(--font-heading);
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.012em;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(2.15rem, 6.4vw, 4.35rem);
-  line-height: 1.08;
+  font-size: clamp(1.85rem, 4.6vw, 3.1rem);
+  line-height: 1.18;
 }
 
 h2 {
-  margin: 0 0 1.25rem;
-  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
-  line-height: 1.15;
+  margin: 0 0 1.15rem;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  line-height: 1.22;
 }
 
 h3 {
-  margin: 0 0 0.4rem;
-  font-size: 1.35rem;
-  line-height: 1.25;
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+  line-height: 1.3;
 }
 
 p {
@@ -194,18 +212,19 @@ p:last-child {
 
 .brand__name {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
-  line-height: 1.1;
+  font-size: 1.05rem;
+  line-height: 1.15;
 }
 
 .brand__meta {
   display: block;
-  margin-top: 0.15rem;
-  font-family: var(--font-body);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  margin-top: 0.2rem;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--g-28);
 }
 
@@ -219,9 +238,9 @@ p:last-child {
 }
 
 .site-nav a {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--g-15);
@@ -229,7 +248,8 @@ p:last-child {
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  text-decoration: underline;
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 var(--accent);
 }
 
 /* Hero
@@ -238,7 +258,7 @@ p:last-child {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(3.25rem, 9vw, 7.5rem) 0 clamp(3rem, 7vw, 5.5rem);
+  padding: clamp(4rem, 11vw, 8.5rem) 0 clamp(3.5rem, 8vw, 6.25rem);
   background: var(--g-95);
 }
 
@@ -262,25 +282,31 @@ p:last-child {
 }
 
 .hero__mission {
-  margin-top: 1.5rem;
-  max-width: 34rem;
-  font-size: 1.0625rem;
+  margin-top: 1.65rem;
+  max-width: 32rem;
+  font-size: 1.05rem;
   color: var(--g-15);
 }
 
 .hero__mantra {
-  margin: 2rem 0 0;
+  margin: 2.15rem 0 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--accent);
+  width: max-content;
+  max-width: 100%;
   font-family: var(--font-body);
-  font-size: clamp(0.78rem, 1.8vw, 0.88rem);
-  font-weight: 700;
+  font-size: clamp(0.72rem, 1.6vw, 0.8rem);
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--g-15);
+  color: var(--accent-ink);
 }
 
 .hero__location {
-  margin-top: 1.25rem;
-  font-size: 0.9rem;
+  margin-top: 1.35rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-style: italic;
   color: var(--g-28);
 }
 
@@ -288,7 +314,7 @@ p:last-child {
    ========================================================================== */
 
 .track-band {
-  padding: clamp(3.25rem, 7vw, 5.75rem) 0;
+  padding: clamp(3.75rem, 8vw, 6.5rem) 0;
 }
 
 .track-band--light {
@@ -312,6 +338,49 @@ p:last-child {
   gap: 1.5rem 3rem;
 }
 
+.track-visual {
+  margin: 0;
+  width: 100%;
+}
+
+.track-visual__plate {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  min-height: 12rem;
+  background: var(--g-45);
+  color: var(--g-95);
+  border: 2px solid var(--accent);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.track-visual__slot {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.track-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.track-visual__label {
+  margin: 0.55rem 0 0;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--accent-ink);
+}
+
+.track-band--dark .track-visual__label {
+  color: var(--accent);
+}
+
 .track-band__index {
   margin: 0 0 0.85rem;
   font-family: var(--font-heading);
@@ -324,31 +393,42 @@ p:last-child {
 }
 
 .track-band__name {
-  margin: 0 0 0.35rem;
-  font-size: clamp(1.85rem, 4vw, 2.65rem);
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
 }
 
 .track-band__kicker {
   margin: 0 0 1.15rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+.track-band--dark .track-band__kicker {
+  color: var(--accent);
 }
 
 .track-band__body {
-  max-width: 38rem;
-  font-size: 1.0625rem;
+  max-width: 36rem;
+  font-size: 1.05rem;
 }
 
 @media (min-width: 720px) {
   .track-band__grid {
-    grid-template-columns: minmax(14rem, 0.9fr) 1.2fr;
+    grid-template-columns: minmax(14rem, 0.72fr) minmax(20rem, 1.28fr);
+    gap: 1.75rem 3.25rem;
     align-items: start;
   }
 
+  .track-visual {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
   .track-band__body {
-    padding-top: 2.35rem;
+    padding-top: 0.15rem;
   }
 }
 
@@ -356,15 +436,14 @@ p:last-child {
    ========================================================================== */
 
 .section {
-  padding: clamp(3.25rem, 7vw, 5.5rem) 0;
+  padding: clamp(3.75rem, 8vw, 6.25rem) 0;
 }
 
 .section--news {
   background: var(--g-88);
 }
 
-.lead-card,
-.institution-card {
+.lead-card {
   display: grid;
   grid-template-columns: 5.5rem 1fr;
   gap: 1.15rem 1.35rem;
@@ -372,11 +451,6 @@ p:last-child {
   padding: 1.25rem 0;
   border-top: 1px solid var(--g-78);
   border-bottom: 1px solid var(--g-78);
-}
-
-.institution-card {
-  margin-top: 2.25rem;
-  grid-template-columns: 4.5rem 1fr;
 }
 
 .residents {
@@ -408,11 +482,11 @@ p:last-child {
 
 .person-track {
   margin: 0.35rem 0 0;
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--g-28);
+  color: var(--accent-ink);
 }
 
 .portrait {
@@ -477,7 +551,7 @@ p:last-child {
 }
 
 .news-item h3 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 .news-item p {
@@ -531,6 +605,7 @@ p:last-child {
   background: var(--g-15);
   color: var(--g-95);
   padding: 2.5rem 0 2rem;
+  border-top: 2px solid var(--accent);
 }
 
 .site-footer__grid {
@@ -559,7 +634,13 @@ p:last-child {
 
 .site-footer a {
   color: var(--g-95);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 var(--accent);
 }
 
 .disclaimer {

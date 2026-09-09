@@ -1,8 +1,8 @@
 ---
-title: Global Game Jam — 306 registered
+title: Global Game Jam — over 300 last year
 date: 2026-01-24
 dateLabel: January 2026
-summary: Global Game Jam at Satellite Lab registered 306 participants at the on-ground site.
+summary: Satellite Lab hosted the largest on-ground Global Game Jam site in the U.S. Last year over 300 registered.
 ---
 
-Global Game Jam at Satellite Lab registered 306 participants at the on-ground site.
+Satellite Lab hosted the largest on-ground Global Game Jam site in the U.S. Last year over 300 registered.
