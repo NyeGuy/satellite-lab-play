@@ -7,9 +7,9 @@
   --g-15: #232629;
   --black: #000000;
 
-  /* Dusty gallery gold — ochre, not neon. Swap when Nye’s reference lands. */
-  --accent: #c4aa68;
-  --accent-ink: #6e5c32;
+  /* Gallery ochre — brass, not neon. Swap when Nye’s reference lands. */
+  --accent: #c9a84b;
+  --accent-ink: #806618;
 
   --font-heading: Georgia, "Times New Roman", Times, serif;
   --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -80,7 +80,7 @@ a:hover {
 }
 
 .site-rail {
-  height: 2px;
+  height: 3px;
   background: var(--accent);
 }
 
