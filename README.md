@@ -105,7 +105,7 @@ Identical to the Pages repo:
 - Named people only: Matt Akers. Residents stay “Appointment forthcoming”.
 - Students **train** robots. They never “build” robots.
 - Keep the footer disclaimer exactly as in `content/site.json`.
-- Grey palette only (no accent color). System fonts only. No analytics, CDNs, or webfonts.
+- Grey tonal system (g-88 → g-78 → g-28) with a restrained dusty-gold gallery accent on rules, focus rings, kickers, and the mantra. No neon yellow. System fonts only. No analytics, CDNs, or webfonts.
 
 ## Stack
 
